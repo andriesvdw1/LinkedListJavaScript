@@ -25,11 +25,21 @@ class LinkedList {
         this.length++;// increment the length of the list by 1
         
     }
+    contains(value) {
+        let current = this.head;
+        while(current != null) {
+            if(current.data === value) return true; //found the value
+            current = current.next; //move to the next node
+        }
+        return false; //value not found in the list
+    }
+
 }
 
 const list = new LinkedList();
-list.add(1);
-list.add(2);
-list.add(3);
-list.add(20);
+list.add("ACE Diamonds");
+list.add("Two of Hearts");
+list.add("Three of Spades");
+list.add("Jack of Clubs");
+console.log("Linked list cards contains the Three of Spades: "+list.contains("Three of Spades")); // returns true
 console.log(list);
