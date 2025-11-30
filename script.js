@@ -42,4 +42,5 @@ list.add("Two of Hearts");
 list.add("Three of Spades");
 list.add("Jack of Clubs");
 console.log("Linked list cards contains the Three of Spades: "+list.contains("Three of Spades")); // returns true
+console.log("Linked list cards contains the Two of Diamonds: "+list.contains("Two of Diamonds")); // returns false
 console.log(list);
