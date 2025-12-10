@@ -10,6 +10,13 @@ class LinkedList {
         this.head = null;
         this.length = 0;
     }
+
+      prepend(data){
+        const newNode = new Node(data);
+        newNode.next = this.head; //point new node to the former head position
+        this.head = newNode; //update head to the new node's position
+        this.length++;// increment the length of the list by 1
+    }
     add(data){
         const newNode = new Node(data);
         if(this.head === null) {
